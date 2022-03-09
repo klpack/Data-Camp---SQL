@@ -12,3 +12,4 @@ FROM countries AS c
   INNER JOIN economies AS e
     -- Match on code
     ON c.code = e.code;
+
