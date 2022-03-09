@@ -4,3 +4,11 @@ FROM cities
   INNER JOIN countries
     ON cities.country_code = countries.code;
  
+-- Next following exercise joining countries and with economic data --
+-- Select fields with aliases --
+SELECT c.code AS country_code, name, year, inflation_rate
+FROM countries AS c
+  -- Join to economies (alias e)
+  INNER JOIN economies AS e
+    -- Match on code
+    ON c.code = e.code;
