@@ -66,3 +66,21 @@ SELECT c.code, name, region, e.year, fertility_rate, unemployment_rate
   INNER JOIN economies AS e
     -- Match on country code and year
     ON c.code = e.code AND e.year = p.year;
+    
+   ---------------------------------------------------------------------------
+    
+    1. INNER JOIN via USING
+
+Congratulations on making it through the first set of exercises on using INNER JOIN to combine two or three tables into one! You'll next learn about the USING keyword in SQL and how it can be used in joins.
+2. The INNER JOIN diagram again
+
+Recall the INNER JOIN diagram you saw in the last video. Think about the SQL code needed to complete this diagram. Let's check it out. We select and alias three fields and use the left table on the left of the join and the right table on the right of the join matching based on the entries for the id key field.
+3. The INNER JOIN diagram with USING
+
+When the key field you'd like to join on is the same name in both tables, you can use a USING clause instead of the ON clause you have seen so far. Since id is the same name in both the left table and the right table we can specify USING instead of ON here. Note that the parentheses are required around the key field with USING. Let's revisit the example of joining the prime_ministers table
+4. Countries with prime ministers and presidents
+
+to the presidents table to determine countries with both types of leaders. How could you fill in the blanks to get the result with USING? (Pause for a few seconds) Did you get it? (PAUSE) Ah, I played a bit of a trick on you here. But why does this work? Since an INNER JOIN includes entries in both tables and both tables contain the countries listed, it doesn't matter the order in which we place the tables in the join if we SELECT these columns. You'll be told in the exercises which table to use on the left and on the right to avoid this confusion. Note again the use of the parentheses around country after USING.
+5. Let's practice!
+
+Now you'll test your understanding of INNER JOINs before we delve into an exercise with USING. Go get 'em! 
