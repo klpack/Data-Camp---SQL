@@ -84,3 +84,12 @@ to the presidents table to determine countries with both types of leaders. How c
 5. Let's practice!
 
 Now you'll test your understanding of INNER JOINs before we delve into an exercise with USING. Go get 'em! 
+--------------------------------------------------------------------------------------------------------------
+-- Select fields
+SELECT c.name AS country, continent, l.name AS language, official
+  -- From countries (alias as c)
+  FROM countries AS c
+  -- Join to languages (as l)
+  INNER JOIN languages AS l
+    -- Match using code
+    USING(code);
